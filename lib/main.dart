@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:photo_search_pixabay_app/pages/result_view.dart';
+import 'package:photo_search_pixabay_app/pages/search_view.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,18 +20,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        body: Column(
-          children: [
-            Text("PixaBay API Search"),
-            TextField(),
-            ElevatedButton(
-              onPressed: () {},
-              child: Text("Search"),
-            ),
-          ],
-        ),
-      ),
+      home: ResultView(),
     );
   }
 }

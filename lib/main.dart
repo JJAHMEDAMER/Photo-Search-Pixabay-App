@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +19,16 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Text("Hello App"),
+        body: Column(
+          children: [
+            Text("PixaBay API Search"),
+            TextField(),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text("Search"),
+            ),
+          ],
+        ),
       ),
     );
   }

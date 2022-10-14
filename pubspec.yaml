@@ -31,6 +31,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+    
+  # Http Package By The Dart Team
+  http: ^0.13.5
 
 
   # The following adds the Cupertino Icons font to your application.

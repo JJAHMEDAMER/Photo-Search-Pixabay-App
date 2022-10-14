@@ -36,7 +36,7 @@ class ResultView extends StatelessWidget {
                     ),
                   );
                 }else{
-                  return Text("Failed");
+                  return CircularProgressIndicator();
                 }
               },
             )

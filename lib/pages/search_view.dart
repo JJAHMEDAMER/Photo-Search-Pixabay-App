@@ -7,13 +7,18 @@ import 'package:photo_search_pixabay_app/widgets/AppText.dart';
 
 class SearchView extends StatelessWidget {
   TextEditingController inputText = TextEditingController();
-  SearchView({super.key,});
+  SearchView({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("PixaPay!"),
+        title: const AppText(
+          text: "PixaPay!",
+          size: 22,
+        ),
         centerTitle: true,
         toolbarHeight: 50,
         backgroundColor: AppColors.darkBlue,
@@ -29,12 +34,13 @@ class SearchView extends StatelessWidget {
               text: "PixaBay API Search",
               size: 26,
             ),
-            AppInputField(textController: inputText,),
+            AppInputField(
+              textController: inputText,
+            ),
             AppButton(
               text: "Search",
               size: 18,
               func: () {
-                print(inputText.text);
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) {

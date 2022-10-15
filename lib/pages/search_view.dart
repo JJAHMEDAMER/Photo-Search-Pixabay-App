@@ -6,7 +6,8 @@ import 'package:photo_search_pixabay_app/widgets/AppInputField.dart';
 import 'package:photo_search_pixabay_app/widgets/AppText.dart';
 
 class SearchView extends StatelessWidget {
-  const SearchView({super.key});
+  TextEditingController inputText = TextEditingController();
+  SearchView({super.key,});
 
   @override
   Widget build(BuildContext context) {
@@ -28,15 +29,16 @@ class SearchView extends StatelessWidget {
               text: "PixaBay API Search",
               size: 26,
             ),
-            AppInputField(),
+            AppInputField(textController: inputText,),
             AppButton(
               text: "Search",
               size: 18,
               func: () {
+                print(inputText.text);
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) {
-                      return ResultView();
+                      return ResultView(searchTerm: inputText.text);
                     },
                   ),
                 );

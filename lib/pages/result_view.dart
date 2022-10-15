@@ -6,7 +6,8 @@ import 'package:photo_search_pixabay_app/utils/colors.dart';
 import 'package:photo_search_pixabay_app/widgets/AppText.dart';
 
 class ResultView extends StatelessWidget {
-  const ResultView({super.key});
+  final String searchTerm;
+  const ResultView({super.key, required this.searchTerm});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +30,7 @@ class ResultView extends StatelessWidget {
           right: 15,
         ),
         child: FutureBuilder(
-          future: getImagesFunc(),
+          future: getImagesFunc(searchTerm),
           builder: (context, snapShot) {
             var MyData = snapShot.data;
             if (snapShot.hasData) {
@@ -73,9 +74,9 @@ class ResultView extends StatelessWidget {
   }
 }
 
-Future<Map> getImagesFunc() async {
+Future<Map> getImagesFunc(String query) async {
   String MyUrl =
-      "https://pixabay.com/api/?key=15690038-3b48850a0e52bfef3940cedb7&q=yellow+flowers&image_type=photo";
+      "https://pixabay.com/api/?key=15690038-3b48850a0e52bfef3940cedb7&q=$query&image_type=photo";
   Uri MyUri = Uri.parse(MyUrl);
   http.Response response = await http.get(MyUri);
   return json.decode(response.body);

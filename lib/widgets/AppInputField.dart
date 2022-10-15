@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:photo_search_pixabay_app/utils/colors.dart';
 
 class AppInputField extends StatelessWidget {
+  final TextEditingController textController;
   final Color color;
   final double size;
   final FontWeight fontWeight;
@@ -13,11 +14,16 @@ class AppInputField extends StatelessWidget {
     this.size = 16,
     this.fontWeight = FontWeight.w600,
     this.fontFamily = 'Raleway',
+    required this.textController,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      // get text
+      controller: textController,
+
+      // How it Looks
       cursorWidth: 2.2,
       cursorColor: AppColors.darkGreen,
       style: TextStyle(

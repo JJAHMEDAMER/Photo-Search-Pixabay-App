@@ -8,6 +8,7 @@ class AppButton extends StatelessWidget {
   final Color color;
   final FontWeight fontWeight;
   final String fontFamily;
+  final void Function() func;
 
   const AppButton(
       {super.key,
@@ -15,12 +16,13 @@ class AppButton extends StatelessWidget {
       this.size = 16,
       this.fontWeight = FontWeight.w600,
       this.fontFamily = 'Raleway',
-      this.color = AppColors.accent});
+      this.color = AppColors.accent,
+      required this.func});
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: func,
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.darkBlue,
         padding: const EdgeInsets.only(

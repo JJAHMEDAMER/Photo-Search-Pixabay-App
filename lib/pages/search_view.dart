@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:photo_search_pixabay_app/pages/result_view.dart';
 import 'package:photo_search_pixabay_app/utils/colors.dart';
 import 'package:photo_search_pixabay_app/widgets/AppButton.dart';
 import 'package:photo_search_pixabay_app/widgets/AppInputField.dart';
@@ -31,6 +32,15 @@ class SearchView extends StatelessWidget {
             AppButton(
               text: "Search",
               size: 18,
+              func: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return ResultView();
+                    },
+                  ),
+                );
+              },
             ),
           ],
         ),

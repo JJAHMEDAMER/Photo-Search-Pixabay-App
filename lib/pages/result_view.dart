@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
 
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
@@ -13,7 +12,7 @@ class ResultView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: AppText(
+        title: const AppText(
           text: "Your Results",
           size: 18,
         ),
@@ -41,7 +40,7 @@ class ResultView extends StatelessWidget {
                   return Container(
                     margin: const EdgeInsets.only(bottom: 15),
                     decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(25)),
+                      borderRadius: BorderRadius.all(Radius.circular(15)),
                       boxShadow: [
                         BoxShadow(
                           color: AppColors.darkBlue,
@@ -51,7 +50,7 @@ class ResultView extends StatelessWidget {
                       ],
                     ),
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(10),
                       child: Image.network(
                         src,
                         fit: BoxFit.cover,

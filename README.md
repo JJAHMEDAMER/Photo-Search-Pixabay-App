@@ -1,16 +1,34 @@
-# photo_search_pixabay_app
+# Photo Search App 
 
-A new Flutter project.
+This is a simple app that uses pixabay API to search images based on keywords. You can enter any keyword and get back a list of results, once the images are retrieved the images are displayed on your screen.
 
-## Getting Started
+This App is built using flutter as a framework
 
-This project is a starting point for a Flutter application.
+## Color palette
+<img width=500px align="center" src="app_images/colorPalette.png" />
 
-A few resources to get you started if this is your first Flutter project:
+<!-- ![color palette](app_images/colorPalette.png) -->
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## App Screens
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<div>
+  <img width=250px align="center" src="app_images/homePage.png" />
+  <img width=250px align="center" src="app_images/resultsPage.png" />
+  
+</div>
+
+<!-- ![Home Page](app_images/homePage.png) ![Results Page](app_images/resultsPage.png) -->
+
+## App Demo
+<img align="center" src="app_images/gif_demo.gif" />
+
+
+<!-- ![Results Page](app_images/gif_demo.gif) -->
+
+### Dependencies
+
+[https://pub.dev/packages/http](https://pub.dev/packages/http)
+
+```yaml
+http: ^0.13.5
+```
